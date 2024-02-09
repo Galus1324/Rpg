@@ -58,8 +58,13 @@ multi_choice(["yes", "no"],
                                  "Bartender: Just promise to protect my tavern if anything crawls out of it.\n")])
 
 if drink:
-    print_slow("After drinking your drink, you leave the tavern.")
+    print_slow("After drinking your drink, you leave the tavern.\n")
 else:
-    print_slow("After that conversation, you leave the tavern.")
-print_slow("")
-
+    print_slow("After that conversation, you leave the tavern.\n")
+    
+print_slow("when you come outside the tavern you see the sun shining in a beautiful spring morning.\n"
+           "before you could go anywhere you see a small child comes with ragged clothes who is running towards you and says:\n"
+           "Eirlys: Hello I am Eirlys.\n"
+           "Eirlys: And really really need your help.\n"
+           "Eirlys: My father went to the tomb so that our family could finally eat every day.\n"
+           "Eirlys: But he hasn't come back.\n" )
