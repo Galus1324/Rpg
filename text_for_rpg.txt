@@ -1,1 +1,71 @@
+=== name ===
+What is your name?
+=== intro ===
+You are resting in a tavern from a long adventure you just came back from recently.
+To you comes a grumpy and tired-looking dwarf bartender and asks you:
+Bartender: Do you want anything to drink?
+Bartender: I have got beer and mead but don't ask for anything fancier than that cuz I don't have it!
+=== beer ===
+Bartender: Good choice!
+Bartender: All our beer comes from locals just a couple minutes from here.
+Bartender: Many strong heroes like yourself have enjoyed the beer here.
+Bartender: Here you go and enjoy!
+=== mead ===
+Bartender: Eh mead, was never a big fan of the drink.
+Bartender: It is just too sweet for me.
+Bartender: I like more erm how would I say manly drinks like beer.
+Bartender: It is nice and bitter.
+=== nothing ===
+Bartender: An adventurer that refuses a drink?
+Bartender: What kind of an adventurer even are you?
+=== bartender_talk ===
+Bartender: Anyways, have you heard that there has been a tomb found near our little village?
+Bartender: Yea, it is rumored that it was created by an ancient lich.
+Bartender: The tomb only accepts one adventurer at a time.
+Bartender: The one who can get out of it alive will gain enormous wealth if the writings on the tomb walls are to be trusted.
+Bartender: I have seen many heroes go and try to clear the tomb but none had succeeded yet.
+Bartender: Are you gonna try, young adventurer?
+=== toa_yes ===
+Bartender: Oh, you must be brave, or are you just so desperate for money?
+Bartender: Who knows well anyways got to go help other customers.
+=== toa_no ===
+Bartender: Well, an honest answer and the one I like as the dead customers don't spend much money.
+Bartender: Just promise to protect my tavern if anything crawls out of it.
+=== drink_yes ===
+After drinking your drink, you leave the tavern.
+=== drink_no ===
+After that conversation, you leave the tavern.
+ === outside_village ===
+when you come outside the tavern you see the sun shining in a beautiful spring morning.
+before you could go anywhere you see a small child with ragged clothes running towards you and saying:
+Eirlys: Hello I am Eirlys.
+Eirlys: And I really really need your help.
+Eirlys: My father went to the Tomb of annihilation so that our family could finally eat every day.
+Eirlys: But he hasn't come back.
+Eirlys: so {player_name}, will you save him?
+Eirlys: I know that you are a strong hero.
+=== help_eirlys ===
+Eirlys: Yes, I knew i could rely on you {player_name}.
+Eirlys: So let me give you some tips before you venture on.
+Eirlys: Here is the map to the Tomb of annihilation.
+Eirlys: Its only a couple of hours on foot from where we are right now.
+Eirlys: I wish you the best of luck!
+Eirlys: Goodbye!
+=== no_help_eirlys ===
+The child says fuck you as he kicks you in your leg before running away.
+=== End_of_part_1 === 
+/
+/
+/
+/
+/
+=== stay_in_the_village ===
+You decided to stay in the village.
+there are multiple things you can do here.
+You can visit one of the artisans(blacksmith and alchemist), the general merchaint go back to the tavern
+or just wonder around and serching for more information regarding the Tomb of annihilation.
+
+
+
+
 

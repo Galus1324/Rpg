@@ -1,1 +1,23 @@
+import pygame, time, sys
+pygame.init()
+field = pygame.display.set_mode((1000, 600))
+clock=pygame.time.Clock()
+fps=(60)
+on=True
+font = pygame.font.Font('font_rpg.ttf', 72)
+pygame.display.set_caption("tomb of annihilation")
+
+while on:
+    field.fill((0,0,0))
+    text_on_field=font.render("Tomb of Annihilation", True,(255,255,255))
+    field.blit(text_on_field,[260,100])
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            on=False
+    pygame.display.flip()
+    clock.tick(fps)
+pygame.quit
+
+
+
 
