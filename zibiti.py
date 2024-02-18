@@ -90,14 +90,14 @@ def blacksmith():
                   lambda: print_slow(blacksmith_talk_1)])
     print_slow(blacksmith_leave)
     
-def merchaint():
-    print_slow(go_to_merchaint)
+def merchant():
+    print_slow(go_to_merchant)
     circle_choice(["buy", "what are you","tell me a story","leave"],
-                  [lambda: (print_slow(merchaint_buy),multi_choice(["potion","ring"],
-                                                                   [lambda: print_slow(ring_of_protection),lambda: print_slow(potion_of_healing)])),
+                  [lambda: (print_slow(merchant_buy),multi_choice(["potion","ring"],
+                                                                   [lambda: print_slow(potion_of_healing),lambda: print_slow(ring_of_protection)])),
                    lambda: print_slow(what_am_i),
                    lambda: print_slow(tiefling_story)])
-    print_slow(merchaint_leave)
+    print_slow(merchant_leave)
 
 
 def tavern_2():
@@ -153,7 +153,7 @@ if toa_map:
 print_slow(stay_in_the_village)
 circle_choice(["blacksmith","merchaint","tavern","wonder", "go towards the tomb"],
               [lambda: blacksmith(), 
-               lambda: merchaint(), 
+               lambda: merchant(), 
                lambda: tavern_2(), 
                lambda: wonder(), 
                lambda: journey_start()]) 

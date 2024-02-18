@@ -77,7 +77,7 @@ Sally: He only bought a realy small knife and left.
 === blacksmith_leave === 
 Sally: Have a great day adventurer!
 You come out to the streets of the village.
-=== go_to_merchaint ===
+=== go_to_merchant ===
 You walk to The Devilish Deals Depot.
 A small shop near Sally's magical forge, run by a charismatic tiefling named Redos Firewhip. 
 You come inside and see that it is filled with more exotic trinkets then you would expect from a small village shop like this.
@@ -85,7 +85,7 @@ The tiefling merchant, with curled horns and a sly grin
 weaves tales and engages patrons in lively banter, turning every purchase into a theatrical exchange.
 When he sees you he says:
 Redos Firewhip: What has brought you into my humble little store?
-=== Merchaint_buy ===
+=== Merchant_buy ===
 Redos Firewhip: Hmmm?
 Redos Firewhip: I suppose you wouldn't be interesting in any of my other crap.
 Redos Firewhip: So here.
