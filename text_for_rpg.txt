@@ -53,17 +53,32 @@ Eirlys: I wish you the best of luck!
 Eirlys: Goodbye!
 === no_help_eirlys ===
 The child says fuck you as he kicks you in your leg before running away.
-=== End_of_part_1 === 
-/
-/
-/
-/
-/
 === stay_in_the_village ===
-You decided to stay in the village.
+You are still in the village.
 there are multiple things you can do here.
 You can visit one of the artisans(blacksmith and alchemist), the general merchaint go back to the tavern
 or just wonder around and serching for more information regarding the Tomb of annihilation.
+=== go_to_blacksmith ===
+you travel a couple hundred meters to the Sally's magical forge. The workshop ran by a cheerful half-orc named Sally. 
+The exterior features a whimsy anvil sign, hinting at the warmth within. When you come Inside,
+the rhythmic sounds of hammer on metal mixed with Sally's hearty laughter immediately get you into a better mood.
+The space is well organized, with every tool neatly placed on its designated spot
+and a well-worn anvil that takes center stage.  
+Sally: Hello welcome to Sally's magical forge what has brought you here?
+=== upgrade_1 ===
+Sally: Oh yes I can see that your gear is quite worn i will fix it right away!
+Sally: Here you go im sure it is even shinier than the day you bought it.
+Sally: Don't worry about paying first time is on the house.
+Sally: But come back to me if you need anything else.
+=== blacksmith_talk_1 ===
+Sally: Yes, I have got a lot more business than usually.
+Sally: Did you know that just yesterday a realy weird man came to me he was muttering something about feeding his family.
+Sally: He only bought a realy small knife and left.
+=== blacksmith_go_away === 
+Sally: Have a great day adventurer!
+You come out to the streets of the village.
+
+
 
 
 
