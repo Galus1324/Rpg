@@ -72,17 +72,40 @@ def circle_choice(answers, consequences):
         print_slow(f"Available answers: {', '.join(answers)}\n")
         x = input().lower()
 
-        if x not in answers:
-            print(f"Your answer '{x}' is not valid.\nValid answers are: {', '.join(answers)}\n")
+        if x == "leave":
+            print_slow("You chose to leave.\n")
+            break
+        elif x not in answers:
+            print_slow(f"Invalid answer '{x}'\n")
         else:
             index = answers.index(x)
             consequences[index]()
             del answers[index]
             del consequences[index]
 
+def blacksmith():
+    print_slow(go_to_blacksmith)
+    circle_choice(["upgrade gear", "talk","leave"],
+                 [lambda: print_slow(upgrade_1),
+                  lambda: print_slow(blacksmith_talk_1)])
+    print_slow(blacksmith_leave)
+    
+def merchaint():
+    print_slow(go_to_merchaint)
+    circle_choice(["buy", "what are you","tell me a story","leave"],
+                  [lambda: (print_slow(merchaint_buy),multi_choice(["potion","ring"],
+                                                                   [lambda: print_slow(ring_of_protection),lambda: print_slow(potion_of_healing)])),
+                   lambda: print_slow(what_am_i),
+                   lambda: print_slow(tiefling_story)])
+    print_slow(merchaint_leave)
 
 
-
+def tavern_2():
+    print("tavern")
+def wonder():
+    print("wonder")
+def journey_start():
+    print_slow("journey")
 
 # Example usage:
 filename = "text_for_rpg.txt"
@@ -93,19 +116,6 @@ extracted_sections = extract_sections(sections)
 
 # Dynamically create variables from extracted sections
 locals().update(extracted_sections)
-
-def journey_start():
-    print_slow("journey")
-
-def soba2():
-    print("soba 2")
-
-def soba3():
-    print("soba 3")
-
-# Dynamically create variables from extracted sections
-locals().update(extracted_sections)
-
 
 print_slow(name)
 player_name = input()
@@ -132,37 +142,21 @@ print_slow(outside_village.format(player_name=player_name))
 
 multi_choice(["yes", "no"],
              [lambda: print_slow(help_eirlys.format(player_name=player_name)),
-              lambda: (print_slow(no_help_eirlys), globals().update({'toa_map': False})),
-              lambda: None])
-
+              lambda: (print_slow(no_help_eirlys), globals().update({'toa_map': False})),])
 
 if toa_map:
     print_slow("Do you wish to leave the village and go follow the map Towards the Tomb?\n")
     multi_choice(["yes", "no"],[lambda: journey_start(), lambda: None])
 
-def blacksmith():
-    print_slow(go_to_blacksmith)
-    circle_choice(["upgrade gear", "talk","go away"],
-                 [lambda: print_slow(upgrade_1),
-                  lambda: print_slow(blacksmith_talk_1),
-                  lambda: print_slow(blacksmith_go_away)])
-
-    
-def alchemist():
-    print("alchemist")
-def merchaint():
-    print("merchaint")
-def tavern_2():
-    print("tavern")
-def wonder():
-    print("wonder")
-
-blacksmith()
 
 # If they stay in the village
 print_slow(stay_in_the_village)
-circle_choice(["blacksmith","alchemist","merchaint","tavern","wonder", "go towards the tomb"],
-              [lambda: blacksmith(), lambda: alchemist(), lambda: merchaint(), lambda: tavern_2(), lambda: wonder(), lambda: journey_start()]) 
+circle_choice(["blacksmith","merchaint","tavern","wonder", "go towards the tomb"],
+              [lambda: blacksmith(), 
+               lambda: merchaint(), 
+               lambda: tavern_2(), 
+               lambda: wonder(), 
+               lambda: journey_start()]) 
 
 
 
