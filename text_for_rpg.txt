@@ -104,7 +104,7 @@ Redos Firewhip: where every purchase becomes a pact of charm and curious delight
 === tiefling_story ===
 Redos Firewhip: In the shadowy realm of the Nine Hells, Asmodeus, the Archduke, forged pacts with mortal sorcerers.
 Redos Firewhip: Offering arcane might, these ambitious mortals pledged their souls.
-Redos Firewhip: From this infernal communion, the tieflings were born—descendants marked with horns and an otherworldly aura.
+Redos Firewhip: From this infernal communion, the tieflings were born-descendants marked with horns and an otherworldly aura.
 Redos Firewhip: Asmodeus, with a sly grin, shares the cosmic interplay that binds tieflings to both infernal and mortal destinies.
 Redos Firewhip: The tale unravels a complex dance of power, ambition, and the enduring connection between realms.
 === merchaint_leave ===
