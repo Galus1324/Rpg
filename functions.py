@@ -1,3 +1,6 @@
+import sys, time, pygame, os
+from pygame import mixer
+
 # Function to load sections from the text file
 def load_sections(filename):
     with open(filename, "r") as file:
