@@ -74,7 +74,7 @@ if toa_map:
 
 # If they stay in the village
 print_slow(stay_in_the_village)
-circle_choice(["blacksmith","merchaint","wonder", "go towards the tomb"],
+circle_choice(["blacksmith","merchant","wonder", "go towards the tomb"],
               [lambda: blacksmith(), 
                lambda: merchant(), 
                lambda: wonder(), 
