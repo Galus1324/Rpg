@@ -19,7 +19,7 @@ Bartender: It is nice and bitter.
 Bartender: An adventurer that refuses a drink?
 Bartender: What kind of an adventurer even are you?
 === bartender_talk ===
-Bartender: Anyways, have you heard that there has been a tomb found near our little village?
+Bartender: Anyways, have you heard that there has been an ancient tomb found near our little village?
 Bartender: Yea, it is rumored that it was created by an ancient lich.
 Bartender: The tomb only accepts one adventurer at a time.
 Bartender: The one who can get out of it alive will gain enormous wealth if the writings on the tomb walls are to be trusted.
@@ -107,8 +107,44 @@ Redos Firewhip: Offering arcane might, these ambitious mortals pledged their sou
 Redos Firewhip: From this infernal communion, the tieflings were born-descendants marked with horns and an otherworldly aura.
 Redos Firewhip: Asmodeus, with a sly grin, shares the cosmic interplay that binds tieflings to both infernal and mortal destinies.
 Redos Firewhip: The tale unravels a complex dance of power, ambition, and the enduring connection between realms.
-=== merchaint_leave ===
+=== merchant_leave ===
 you leave his not so humble store and go back to the streets from where you already hear the blacksmith again.
+=== wonder_shack ===
+you walk around in hope to find someone to talk to.
+after a bit of time has passed you see an elderly elf waving from under his window.
+He is inside a wooden shack that looks like it could collapse at any moment.
+=== ignore ===
+you see the grandpa's smile turn to a sour face and turn away.
+you dont find anything else that would interest you
+=== enen_the_wise ===
+You open the door to the shack and hear a loud squeak from it.
+Enen the wise: Hello young one.
+Enen the wise: Welcome to my humble home.
+Enen the wise: Do you by any chance have the time for a cup of tea with an old man.
+Enen the wise: Of course you do haha.
+brings you a cup of tea
+Enen the wise: Did you know that i was once an adventurer just like you.
+Enen the wise: But then I took an arrow to the knee.
+Enen the wise: Do you want to know anything about the village.
+=== village_history ===
+Enen the wise: Centuries ago, a group of weary travelers stumbled upon a lush valley surrounded by rolling hills and dense forests.
+Enen the wise: Charmed by the serene beauty of the landscape, they decided to establish a village, naming it Eldergrove.
+Enen the wise: The founding families, a mix of humans, elves, and dwarves,
+Enen the wise: worked harmoniously to build the first cottages and clear the land for cultivation.
+=== tomb_history ===
+Enen the wise: Hidden deep within the dense jungles of Chult,
+Enen the wise: the Tomb of Annihilation is an ancient and malevolent structure crafted by the hands of a forgotten civilization.
+Enen the wise: Designed as a labyrinth of death by the lich Acererak, the tomb is a treacherous maze filled with deadly traps,
+Enen the wise: undead guardians, and arcane puzzles. It is said to hold unimaginable treasures and secrets,
+Enen the wise: but those who enter its depths risk facing the wrath of its cursed creator.
+Enen the wise: My family has known about it for generations.
+=== enen_past ===
+Enen the wise: I used to be quite an adventuerer, skilled in druidcraft.
+Enen the wise: I was prepared to uncover a great mystery.
+Enen the wise: But i was stoped by an archer from journiying forth.
+Enen the wise: Now i just hang around here drinking tea with weird adventurers.
+=== enen_leave ===
+you finnish your tea which was very delicious and leave the little shack.
 
 
 

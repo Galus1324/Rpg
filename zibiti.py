@@ -21,13 +21,30 @@ def merchant():
     print_slow(go_to_merchant)
     circle_choice(["buy", "what are you","tell me a story","leave"],
                   [lambda: (print_slow(merchant_buy),multi_choice(["potion","ring"],
-                                                                   [lambda: print_slow(potion_of_healing),lambda: print_slow(ring_of_protection)])),
+                                                                   [lambda: print_slow(potion_of_healing),
+                                                                    lambda: print_slow(ring_of_protection)])),
                    lambda: print_slow(what_am_i),
                    lambda: print_slow(tiefling_story)])
     print_slow(merchant_leave)
 
 def wonder():
-    print("wonder")
+    print_slow(wonder_shack)
+    multi_choice(["go inside","ignore"],
+                 [lambda: enen_talk(),
+                  lambda: print_slow(ignore),])
+
+def enen_talk():
+    print_slow(enen_the_wise)
+    circle_choice(["village history","tomb history","enen past","leave"],
+                  [lambda: print_slow(village_history),
+                   lambda: print_slow(tomb_history),
+                   lambda: print_slow(enen_past)])
+    print_slow(enen_leave)
+
+
+
+    
+
 def journey_start():
     print_slow("journey")
 
