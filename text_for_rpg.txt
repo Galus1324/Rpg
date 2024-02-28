@@ -146,6 +146,8 @@ Enen the wise: Now i just hang around here drinking tea with weird adventurers.
 === enen_leave ===
 you finnish your tea which was very delicious and leave the little shack.
 === journey ===
+You start your journey towards the Tomb after thanking everyone in the village.
+
 
 
 

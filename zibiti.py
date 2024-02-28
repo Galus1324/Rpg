@@ -42,11 +42,10 @@ def enen_talk():
     print_slow(enen_leave)
 
 
-
-    
-
 def journey_start():
     print_slow("journey")
+    
+
 
 # Example usage:
 filename = "text_for_rpg.txt"
