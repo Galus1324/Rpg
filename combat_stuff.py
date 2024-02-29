@@ -26,8 +26,12 @@ class Character:
     def attack(self, target) -> None:
         if random.randint(1, 20) + self.weapon.attack_bonus >= target.armor.armor_class:
             damage = self.weapon.calculate_damage()
+            print(f"{self.name} hit {target.name} with {self.weapon.name}")
             target.health -= damage
             target.health = max(target.health, 0)
+
+        else: 
+            print(f"{self.name} missed {target.name} with {self.weapon.name}")
 
 class Player(Character):
     def __init__(self, name: str, health: int, weapon: Weapon, armor: Armor, money: int) -> None:
