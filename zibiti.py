@@ -8,6 +8,7 @@ from combat_stuff import *
 drink=True
 toa_map=True
 
+
 # for typing sound
 mixer.init()
 mixer.music.load('sound.mp3')
@@ -16,14 +17,17 @@ mixer.music.set_volume(0.2)
 def select_fighter():
     global player
     player = fighter
+    print_slow("You selected Fighter.\n")
 
 def select_mage():
     global player
     player = mage
+    print_slow("You selected Mage.\n")
 
 def select_rogue():
     global player
     player = rogue
+    print_slow("You selected Rogue.\n")
 
 def blacksmith():
     print_slow(go_to_blacksmith)
@@ -73,12 +77,15 @@ extracted_sections = extract_sections(sections)
 locals().update(extracted_sections)
 
 print_slow(class_selection)
-multi_choice(["fighter", "mage","rogue"],
-             [select_fighter(),
-              select_mage(),
-              select_rogue()])
+multi_choice(["fighter", "mage", "rogue"],
+             [select_fighter,
+              select_mage,
+              select_rogue])
+
 print_slow(name)
-player_name = input()
+
+player.name = input()
+
 print_slow(intro)
 
 multi_choice(["beer", "mead", "nothing"],

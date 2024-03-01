@@ -38,8 +38,7 @@ player_name = ""
 
 class Player(Character):
     def __init__(self, name: str, health: int, weapon: Weapon, armor_class: int, money: int) -> None:
-        super().__init__(name , health, weapon, armor_class)
-        self.name = player_name
+        super().__init__(name, health, weapon, armor_class)
         self.money = money
 
 class Enemy(Character):
