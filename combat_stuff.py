@@ -1,5 +1,7 @@
 import random
 
+
+
 class Weapon:
     def __init__(self, name: str, min_damage: int, max_damage: int, attack_bonus: int) -> None:
         self.name = name
@@ -32,25 +34,33 @@ class Character:
         else: 
             print(f"{self.name} missed {target.name} with {self.weapon.name}")
 
+player_name = ""
+
 class Player(Character):
     def __init__(self, name: str, health: int, weapon: Weapon, armor_class: int, money: int) -> None:
-        super().__init__(name, health, weapon, armor_class)
+        super().__init__(name , health, weapon, armor_class)
+        self.name = player_name
         self.money = money
 
 class Enemy(Character):
     def __init__(self, name: str, health: int, weapon: Weapon, armor_class: int) -> None:
         super().__init__(name, health, weapon, armor_class)
 
+player = Player
+
 # Define weapons and armor
 sword = Weapon(name="Sword", min_damage=4, max_damage=14, attack_bonus=5)
 great_axe = Weapon(name="Great Axe", min_damage=1, max_damage=20, attack_bonus=4)
 fists = Weapon(name="Fists", min_damage=4, max_damage=4, attack_bonus=3)
-
+spell_book = Weapon(name="spell book", min_damage=5, max_damage=30, attack_bonus=3)
+dagger = Weapon(name="dagger", min_damage=10, max_damage=20, attack_bonus=4)
 
 
 # Create characters
-player = Player(name="Gal", health=100, weapon=sword, armor_class=13, money=100)
-goblin = Enemy(name="Goblin_1", health=50, weapon=sword, armor_class=17)
+fighter = Player(name=player_name, health=100, weapon=sword, armor_class=17, money=100)
+mage = Player(name=player_name,  health=60, weapon=spell_book, armor_class=13, money=200)
+rogue = Player(name=player_name, health=70, weapon=dagger, armor_class=15, money=150)
+goblin = Enemy(name="Goblin_1", health=50, weapon=sword, armor_class=15)
 
 # combat loop
 def combat(player,enemy):
@@ -73,4 +83,3 @@ def combat(player,enemy):
             pass
 
         input()
-combat(player,goblin)

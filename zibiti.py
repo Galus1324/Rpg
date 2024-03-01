@@ -1,6 +1,9 @@
-import sys, time, pygame, os
+import sys, time, pygame, os, random
 from pygame import mixer
 from functions import *
+from combat_stuff import *
+
+
 
 drink=True
 toa_map=True
@@ -9,6 +12,18 @@ toa_map=True
 mixer.init()
 mixer.music.load('sound.mp3')
 mixer.music.set_volume(0.2)
+
+def select_fighter():
+    global player
+    player = fighter
+
+def select_mage():
+    global player
+    player = mage
+
+def select_rogue():
+    global player
+    player = rogue
 
 def blacksmith():
     print_slow(go_to_blacksmith)
@@ -57,6 +72,11 @@ extracted_sections = extract_sections(sections)
 # Dynamically create variables from extracted sections
 locals().update(extracted_sections)
 
+print_slow(class_selection)
+multi_choice(["fighter", "mage","rogue"],
+             [select_fighter(),
+              select_mage(),
+              select_rogue()])
 print_slow(name)
 player_name = input()
 print_slow(intro)

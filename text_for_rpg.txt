@@ -1,3 +1,7 @@
+=== class_selection ===
+Welcome player!
+To RPG game Tomb of annihilation.
+to begin choose your class.
 === name ===
 What is your name?
 === intro ===
