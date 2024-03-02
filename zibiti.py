@@ -2,6 +2,7 @@ import sys, time, os, random
 from pygame import mixer
 from functions import *
 from combat_stuff import *
+from music import *
 
 
 
@@ -66,6 +67,7 @@ def get_lost():
     print_slow(escaping_forest)
 
 def journey_start():
+    play_sound(jungle_music, channel2)
     print_slow(journey)
     if not toa_map:
         get_lost()
@@ -92,6 +94,8 @@ multi_choice(["fighter", "mage", "rogue"],
 print_slow(name)
 
 player.name = input()
+
+combat(player, triceratops)
 
 play_sound(village_music, channel2)
 print_slow(intro)
@@ -128,9 +132,10 @@ print_slow(stay_in_the_village)
 circle_choice(["blacksmith","merchant","wonder", "go towards the tomb"],
               [lambda: blacksmith(), 
                lambda: merchant(), 
-               lambda: wonder(), 
+               lambda: wonder(),
                lambda: journey_start()])
- 
+
+
 
 
 

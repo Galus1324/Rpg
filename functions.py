@@ -1,5 +1,5 @@
 import sys, time, pygame, os
-from pygame import mixer
+from music import *
 
 # Function to load sections from the text file
 def load_sections(filename):
@@ -34,22 +34,6 @@ def extract_sections(sections):
     
     return extracted_variables
 
-# for  sound
-mixer.init()
-mixer.set_num_channels(2)
-typing_sound = mixer.Sound("music/sound.mp3")
-village_music = mixer.Sound("music/village_music.mp3")
-final_boss_music = mixer.Sound("music/final_boss.mp3")
-epic_fight_music = mixer.Sound("music/epic_fight_music.mp3")
-
-channel1 = mixer.Channel(0)
-channel2 = mixer.Channel(1)
-
-channel1.set_volume(0.2)
-
-def play_sound(sound, channel):
-    channel.play(sound, loops=-1)
-
 # Function for printing text slowly
 def print_slow(args):
     play_sound(typing_sound, channel1)
@@ -57,13 +41,13 @@ def print_slow(args):
         for char in arg:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.001)
+            time.sleep(0.05)
     channel1.stop()
 
 # Function for multiple choice interactions
 def multi_choice(answers, consequences):
     print_slow("Choose an option:\n")
-    print_slow(f"Available answers: {', '.join(answers)}\n")
+    """print_slow(f"Available answers: {', '.join(answers)}\n")"""
     x = input().lower()
 
     if x not in answers:

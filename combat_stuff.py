@@ -77,7 +77,7 @@ def player_guard(player):
 def combat(player, enemy):
     print_slow(f"combat between {player.name} and {enemy.name} has started.\n")
     while True:
-        multi_choice(["attack", "guard"],
+        multi_choice(["attack" or "a", "guard" or "g"],
                      [lambda: player_attack(player, enemy),
                       lambda: player_guard(player)])
         if enemy.health == 0:
