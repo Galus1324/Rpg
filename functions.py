@@ -34,15 +34,18 @@ def extract_sections(sections):
     
     return extracted_variables
 
+def play_sound(sound, channel):
+    channel.play(sound)
+
 # Function for printing text slowly
 def print_slow(args):
-    mixer.music.play()
+    play_sound(sound1, channel1)
     for arg in args:
         for char in arg:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(0.001)
-    mixer.music.stop()
+    channel1.stop()
 
 # Function for multiple choice interactions
 def multi_choice(answers, consequences):

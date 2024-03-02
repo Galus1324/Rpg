@@ -1,4 +1,4 @@
-import sys, time, pygame, os, random
+import sys, time, os, random
 from pygame import mixer
 from functions import *
 from combat_stuff import *
@@ -9,10 +9,17 @@ drink=True
 toa_map=True
 
 
-# for typing sound
+# for  sound
 mixer.init()
-mixer.music.load('sound.mp3')
-mixer.music.set_volume(0.2)
+mixer.set_num_channels(2)
+typing_sound = mixer.Sound("sound.mp3")
+village_music = mixer.Sound("village_music.mp3")
+
+mixer.typing_sound.set_volume(0.2)
+
+channel1 = mixer.Channel(0)
+channel2 = mixer.Channel(1)
+
 
 def select_fighter():
     global player
@@ -68,6 +75,7 @@ def enen_talk():
 def get_lost():
     print_slow(getting_lost)
     combat(player, triceratops)
+    print_slow(escaping_forest)
 
 def journey_start():
     print_slow(journey)
@@ -75,6 +83,7 @@ def journey_start():
         get_lost()
     else:
         pass
+
 
 filename = "text_for_rpg.txt"
 sections = load_sections("text_for_rpg.txt")
@@ -95,8 +104,6 @@ multi_choice(["fighter", "mage", "rogue"],
 print_slow(name)
 
 player.name = input()
-
-get_lost()
 
 print_slow(intro)
 

@@ -50,9 +50,9 @@ Eirlys: so {player_name}, will you save him?
 Eirlys: I know that you are a strong hero.
 === help_eirlys ===
 Eirlys: Yes, I knew I could rely on you {player_name}.
-Eirlys: So let me give you some tips before you venture on.
+Eirlys: So, let me give you some tips before you venture on.
 Eirlys: Here is the map to the Tomb of annihilation.
-Eirlys: Its only a couple of hours on foot from where we are right now.
+Eirlys: It is only a couple of days on foot from where we are right now.
 Eirlys: I wish you the best of luck!
 Eirlys: Goodbye!
 === no_help_eirlys ===
@@ -60,8 +60,8 @@ The child says fuck you as he kicks you in your leg before running away.
 === stay_in_the_village ===
 You are still in the village.
 there are multiple things you can do here.
-You can visit the blacksmith, the general merchaint go back to the tavern
-or just wonder around and serching for more information regarding the Tomb of annihilation.
+You can visit the blacksmith, the general merchant go back to the tavern
+or just wonder around and searching for more information regarding the Tomb of annihilation.
 === go_to_blacksmith ===
 you come to the Sally's magical forge. The workshop ran by a cheerful half-orc named Sally. 
 The exterior features a whimsy anvil sign, hinting at the warmth within. When you come Inside,
@@ -71,13 +71,13 @@ and a well-worn anvil that takes center stage.
 Sally: Hello welcome to Sally's magical forge what has brought you here?
 === upgrade_1 ===
 Sally: Oh yes I can see that your gear is quite worn i will fix it right away!
-Sally: Here you go im sure it is even shinier than the day you bought it.
+Sally: Here you go i am sure it is even shinier than the day you bought it.
 Sally: Don't worry about paying first time is on the house.
 Sally: But come back to me if you need anything else.
 === blacksmith_talk_1 ===
 Sally: Yes, I have got a lot more business than usually.
-Sally: Did you know that just yesterday a realy weird man came to me he was muttering something about feeding his family.
-Sally: He only bought a realy small knife and left.
+Sally: Did you know that just yesterday a really weird man came to me he was muttering something about feeding his family.
+Sally: He only bought a really small knife and left.
 === blacksmith_leave === 
 Sally: Have a great day adventurer!
 You come out to the streets of the village.
@@ -100,7 +100,7 @@ Redos Firewhip: Excellent choice!
 Redos Firewhip: The ring will protect you on all of your upcoming battles.
 === potion_of_healing ===
 Redos Firewhip: Excellent choice!
-Redos Firewhip: Just remember once you use it it's gone so use it when you realy need to.
+Redos Firewhip: Just remember once you use it it's gone so use it when you really need to.
 === what_am_i ===
 Redos Firewhip: I am a tiefling of many tales, weaving magic into everyday wares at the Devilish Deals Depot. 
 Redos Firewhip: Horns curled and grin sly, I blend enchantment with mischief. Visit my vibrant emporium in the heart of the village,
@@ -125,9 +125,9 @@ You open the door to the shack and hear a loud squeak from it.
 Enen the wise: Hello young one.
 Enen the wise: Welcome to my humble home.
 Enen the wise: Do you by any chance have the time for a cup of tea with an old man.
-Enen the wise: Of course you do haha.
+Enen the wise: Of course, you do haha.
 brings you a cup of tea
-Enen the wise: Did you know that i was once an adventurer just like you.
+Enen the wise: Did you know that I was once an adventurer just like you.
 Enen the wise: But then I took an arrow to the knee.
 Enen the wise: Do you want to know anything about the village.
 === village_history ===
@@ -137,28 +137,32 @@ Enen the wise: The founding families, a mix of humans, elves, and dwarves,
 Enen the wise: worked harmoniously to build the first cottages and clear the land for cultivation.
 === tomb_history ===
 Enen the wise: Hidden deep within the dense jungles of Chult,
-Enen the wise: the Tomb of Annihilation is an ancient and malevolent structure crafted by the hands of a forgotten civilization.
+Enen the wise: The Tomb of Annihilation is an ancient and malevolent structure crafted by the hands of a forgotten civilization.
 Enen the wise: Designed as a labyrinth of death by the lich Acererak, the tomb is a treacherous maze filled with deadly traps,
 Enen the wise: undead guardians, and arcane puzzles. It is said to hold unimaginable treasures and secrets,
 Enen the wise: but those who enter its depths risk facing the wrath of its cursed creator.
 Enen the wise: My family has known about it for generations.
 === enen_past ===
-Enen the wise: I used to be quite an adventuerer, skilled in druidcraft.
+Enen the wise: I used to be quite an adventurer, skilled in druidcraft.
 Enen the wise: I was prepared to uncover a great mystery.
-Enen the wise: But i was stoped by an archer from journiying forth.
-Enen the wise: Now i just hang around here drinking tea with weird adventurers.
+Enen the wise: But I was stopped by an archer from journeying forth.
+Enen the wise: Now I just hang around here drinking tea with weird adventurers.
 === enen_leave ===
-you finnish your tea which was very delicious and leave the little shack.
+you finish your tea which was very delicious and leave the little shack.
 === journey ===
 Before you leave a local warns you about many dangers along the road.
 Specifically dinosaurs and bandits.
 You start your journey towards the Tomb after thanking everyone in the village.
-you are traveling south trough vast forests all around you. 
+you are traveling south through vast forests all around you. 
 === getting_lost ===
 You decide to stray from the trail as it seems to be faster that way.
 Before you know you get lost with no idea where you came from.
 When you are searching for a way out you stumble upon a triceratops eager to prove to you his strength.
 The beast charges towards you and with no other choice you prepare for battle.
+ === escaping_forest ===
+After defeating the beast you slowly give up on getting out of the forest today so you set a camp.
+You eat some of your food and go to sleep.
+You wake up felling lively and replenished.
 
 
 
