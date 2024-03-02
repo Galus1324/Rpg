@@ -27,12 +27,12 @@ class Character:
     def attack(self, target) -> None:
         if random.randint(1, 20) + self.weapon.attack_bonus >= target.armor_class:
             damage = self.weapon.calculate_damage()
-            print(f"{self.name} hit {target.name} with {self.weapon.name}")
+            print(f"{self.name} hit {target.name} with a {self.weapon.name}")
             target.health -= damage
             target.health = max(target.health, 0)
 
         else: 
-            print(f"{self.name} missed {target.name} with {self.weapon.name}")
+            print(f"{self.name} missed {target.name} with a {self.weapon.name}")
 
 player_name = ""
 
@@ -61,26 +61,32 @@ mage = Player(name=player_name,  health=60, weapon=spell_book, armor_class=13, m
 rogue = Player(name=player_name, health=70, weapon=dagger, armor_class=15, money=150)
 goblin = Enemy(name="Goblin_1", health=50, weapon=sword, armor_class=15)
 
+def player_attack(player, enemy):
+    player.attack(enemy)
+    print_slow(f"health of {enemy.name}: {enemy.health}\n")
+
+def player_guard(player):
+    player.guard()
+    print_slow(f"armor class of {player.name} has increased to {player.armor_class}\n")
+
+    
 # combat loop
-def combat(player,enemy):
+def combat(player, enemy):
     while True:
         multi_choice(["attack", "guard"],
-                     [])
-        
-        player.attack(enemy)
-        print(f"health of {enemy.name}: {enemy.health}")
+                     [lambda: player_attack(player, enemy),
+                      lambda: player_guard(player)])
         if enemy.health == 0:
-            print("you won")
+            print("you won\n")
             break
         else:
-            pass
-        enemy.attack(player)
-        print(f"health of {player.name}: {player.health}")
-        player.armor_class = player.armor_class_base
-        if player.health == 0:
-            print("you died")
-            break
-        else:
-            pass
+            enemy.attack(player)
+            print_slow(f"health of {player.name}: {player.health}\n")
+            player.armor_class = player.armor_class_base
+            if player.health == 0:
+                print_slow("you died")
+                break
+            else:
+                pass
 
-        input()
+        

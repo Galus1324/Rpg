@@ -86,6 +86,8 @@ print_slow(name)
 
 player.name = input()
 
+combat(player, goblin)
+
 print_slow(intro)
 
 multi_choice(["beer", "mead", "nothing"],
