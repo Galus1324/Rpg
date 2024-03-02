@@ -29,10 +29,15 @@ def select_rogue():
     player = rogue
     print_slow("You selected Rogue.\n")
 
+def upgrade_armor():
+    print_slow(upgrade_1)
+    player.armor_class += 1
+    player.armor_class_base += 1
+
 def blacksmith():
     print_slow(go_to_blacksmith)
     circle_choice(["upgrade gear", "talk","leave"],
-                 [lambda: print_slow(upgrade_1),
+                 [lambda: upgrade_armor(),
                   lambda: print_slow(blacksmith_talk_1)])
     print_slow(blacksmith_leave)
     
@@ -77,6 +82,7 @@ extracted_sections = extract_sections(sections)
 locals().update(extracted_sections)
 
 print_slow(class_selection)
+
 multi_choice(["fighter", "mage", "rogue"],
              [select_fighter,
               select_mage,
@@ -85,8 +91,6 @@ multi_choice(["fighter", "mage", "rogue"],
 print_slow(name)
 
 player.name = input()
-
-combat(player, goblin)
 
 print_slow(intro)
 
