@@ -1,5 +1,5 @@
 import random
-
+from functions import *
 
 
 class Weapon:
@@ -64,7 +64,9 @@ goblin = Enemy(name="Goblin_1", health=50, weapon=sword, armor_class=15)
 # combat loop
 def combat(player,enemy):
     while True:
-        print("attack or guard?")
+        multi_choice(["attack", "guard"],
+                     [])
+        
         player.attack(enemy)
         print(f"health of {enemy.name}: {enemy.health}")
         if enemy.health == 0:
