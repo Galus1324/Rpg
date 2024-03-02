@@ -28,7 +28,7 @@ def extract_sections(sections):
     extracted_variables = {}
     
     for heading, content in sections.items():
-        # Convert heading to a valid variable name (replace spaces with underscores and make it lowercase)
+       
         variable_name = heading.replace(" ", "_").lower()
         extracted_variables[variable_name] = content
     

@@ -27,12 +27,12 @@ class Character:
     def attack(self, target) -> None:
         if random.randint(1, 20) + self.weapon.attack_bonus >= target.armor_class:
             damage = self.weapon.calculate_damage()
-            print(f"{self.name} hit {target.name} with a {self.weapon.name}")
+            print_slow(f"{self.name} hit {target.name} with {self.weapon.name}\n")
             target.health -= damage
             target.health = max(target.health, 0)
 
         else: 
-            print(f"{self.name} missed {target.name} with a {self.weapon.name}")
+            print_slow(f"{self.name} missed {target.name} with {self.weapon.name}\n")
 
 player_name = ""
 
@@ -48,11 +48,13 @@ class Enemy(Character):
 player = Player
 
 # Define weapons and armor
-sword = Weapon(name="Sword", min_damage=4, max_damage=14, attack_bonus=5)
-great_axe = Weapon(name="Great Axe", min_damage=1, max_damage=20, attack_bonus=4)
-fists = Weapon(name="Fists", min_damage=4, max_damage=4, attack_bonus=3)
-spell_book = Weapon(name="spell book", min_damage=5, max_damage=30, attack_bonus=3)
-dagger = Weapon(name="dagger", min_damage=10, max_damage=20, attack_bonus=4)
+sword = Weapon(name="a Sword", min_damage=10, max_damage=40, attack_bonus=9)
+great_axe = Weapon(name="a Great Axe", min_damage=5, max_damage=50, attack_bonus=8)
+fists = Weapon(name="Fists", min_damage=4, max_damage=4, attack_bonus=6)
+spell_book = Weapon(name="a spell book", min_damage=1, max_damage=60, attack_bonus=6)
+dagger = Weapon(name="a dagger", min_damage=20, max_damage=35, attack_bonus=8)
+horns = Weapon(name="horns", min_damage=5, max_damage=8, attack_bonus=5)
+tail = Weapon(name="a tail", min_damage=1, max_damage=8, attack_bonus=7)
 
 
 # Create characters
@@ -60,6 +62,7 @@ fighter = Player(name=player_name, health=100, weapon=sword, armor_class=17, mon
 mage = Player(name=player_name,  health=60, weapon=spell_book, armor_class=13, money=200)
 rogue = Player(name=player_name, health=70, weapon=dagger, armor_class=15, money=150)
 goblin = Enemy(name="Goblin_1", health=50, weapon=sword, armor_class=15)
+triceratops = Enemy(name="triceratops", health=200, weapon=horns, armor_class=14)
 
 def player_attack(player, enemy):
     player.attack(enemy)
@@ -72,6 +75,7 @@ def player_guard(player):
     
 # combat loop
 def combat(player, enemy):
+    print_slow(f"combat between {player.name} and {enemy.name} has started.\n")
     while True:
         multi_choice(["attack", "guard"],
                      [lambda: player_attack(player, enemy),
@@ -84,7 +88,7 @@ def combat(player, enemy):
             print_slow(f"health of {player.name}: {player.health}\n")
             player.armor_class = player.armor_class_base
             if player.health == 0:
-                print_slow("you died")
+                print_slow("you died\n")
                 break
             else:
                 pass

@@ -1,7 +1,7 @@
 === class_selection ===
 Welcome player!
-To RPG game Tomb of annihilation.
-to begin choose your class.
+To the RPG game Tomb of annihilation.
+To begin choose your class.
 === name ===
 What is your name?
 === intro ===
@@ -150,7 +150,17 @@ Enen the wise: Now i just hang around here drinking tea with weird adventurers.
 === enen_leave ===
 you finnish your tea which was very delicious and leave the little shack.
 === journey ===
+Before you leave a local warns you about many dangers along the road.
+Specifically dinosaurs and bandits.
 You start your journey towards the Tomb after thanking everyone in the village.
+you are traveling south trough vast forests all around you. 
+=== getting_lost ===
+You decide to stray from the trail as it seems to be faster that way.
+Before you know you get lost with no idea where you came from.
+When you are searching for a way out you stumble upon a triceratops eager to prove to you his strength.
+The beast charges towards you and with no other choice you prepare for battle.
+
+
 
 
 

@@ -65,13 +65,17 @@ def enen_talk():
                    lambda: print_slow(enen_past)])
     print_slow(enen_leave)
 
+def get_lost():
+    print_slow(getting_lost)
+    combat(player, triceratops)
 
 def journey_start():
-    print_slow("journey")
-    
+    print_slow(journey)
+    if not toa_map:
+        get_lost()
+    else:
+        pass
 
-
-# Example usage:
 filename = "text_for_rpg.txt"
 sections = load_sections("text_for_rpg.txt")
 
@@ -91,6 +95,8 @@ multi_choice(["fighter", "mage", "rogue"],
 print_slow(name)
 
 player.name = input()
+
+get_lost()
 
 print_slow(intro)
 
@@ -127,7 +133,8 @@ circle_choice(["blacksmith","merchant","wonder", "go towards the tomb"],
               [lambda: blacksmith(), 
                lambda: merchant(), 
                lambda: wonder(), 
-               lambda: journey_start()]) 
+               lambda: journey_start()])
+ 
 
 
 
