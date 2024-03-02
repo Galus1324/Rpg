@@ -9,18 +9,6 @@ drink=True
 toa_map=True
 
 
-# for  sound
-mixer.init()
-mixer.set_num_channels(2)
-typing_sound = mixer.Sound("sound.mp3")
-village_music = mixer.Sound("village_music.mp3")
-
-mixer.typing_sound.set_volume(0.2)
-
-channel1 = mixer.Channel(0)
-channel2 = mixer.Channel(1)
-
-
 def select_fighter():
     global player
     player = fighter
@@ -105,6 +93,7 @@ print_slow(name)
 
 player.name = input()
 
+play_sound(village_music, channel2)
 print_slow(intro)
 
 multi_choice(["beer", "mead", "nothing"],

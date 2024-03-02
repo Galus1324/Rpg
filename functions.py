@@ -34,12 +34,25 @@ def extract_sections(sections):
     
     return extracted_variables
 
+# for  sound
+mixer.init()
+mixer.set_num_channels(2)
+typing_sound = mixer.Sound("sound.mp3")
+village_music = mixer.Sound("village_music.mp3")
+final_boss_music = mixer.Sound("final_boss.mp3")
+epic_fight_music = mixer.Sound("epic_fight_music.mp3")
+
+channel1 = mixer.Channel(0)
+channel2 = mixer.Channel(1)
+
+channel1.set_volume(0.2)
+
 def play_sound(sound, channel):
     channel.play(sound)
 
 # Function for printing text slowly
 def print_slow(args):
-    play_sound(sound1, channel1)
+    play_sound(typing_sound, channel1)
     for arg in args:
         for char in arg:
             sys.stdout.write(char)
