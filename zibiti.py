@@ -104,8 +104,6 @@ print_slow(name)
 
 player.name = input()
 
-combat(player, triceratops)
-
 play_sound(village_music, channel2)
 print_slow(intro)
 
@@ -134,7 +132,9 @@ multi_choice(["yes", "no"],
 
 if toa_map:
     print_slow("Do you wish to leave the village and go follow the map Towards the Tomb?\n")
-    multi_choice(["yes", "no"],[lambda: journey_start(), lambda: None])
+    multi_choice(["yes", "no"],
+                 [lambda: journey_start(),
+                  lambda: None])
 
 # If they stay in the village
 print_slow(stay_in_the_village)

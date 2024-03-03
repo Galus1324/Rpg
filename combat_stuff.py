@@ -78,7 +78,7 @@ def player_guard(player):
 # combat loop
 def combat(player, enemy):
     print_slow(f"combat between {player.name} and {enemy.name} has started.\n")
-    time.sleep(2)
+    time.sleep(1)
     while True:
         os.system("cls")
         multi_choice(["attack", "guard"],
