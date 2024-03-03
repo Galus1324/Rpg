@@ -23,7 +23,7 @@ class HealthBar:
 
     def __init__(self,
                  entity,
-                 length: int = 20,
+                 length: int = 50,
                  is_colored: bool = True,
                  color: str = "") -> None:
         self.entity = entity

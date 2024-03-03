@@ -28,10 +28,10 @@ class Character:
     def attack(self, target) -> None:
         if random.randint(1, 20) + self.weapon.attack_bonus >= target.armor_class:
             damage = self.weapon.calculate_damage()
-            target.health_bar.update()
             print(f"{self.name} hit {target.name} with {self.weapon.name}\n")
             target.health -= damage
             target.health = max(target.health, 0)
+            target.health_bar.update()
 
         else: 
             print(f"{self.name} missed {target.name} with {self.weapon.name}\n")
@@ -67,7 +67,7 @@ fighter = Player(name=player_name, health=100, weapon=sword, armor_class=17, mon
 mage = Player(name=player_name,  health=60, weapon=spell_book, armor_class=13, money=200)
 rogue = Player(name=player_name, health=70, weapon=dagger, armor_class=15, money=150)
 goblin = Enemy(name="Goblin_1", health=50, weapon=sword, armor_class=15)
-triceratops = Enemy(name="triceratops", health=200, weapon=horns, armor_class=14)
+triceratops = Enemy(name="triceratops", health=200, weapon=horns, armor_class=12)
    
 
 def player_guard(player):
@@ -78,7 +78,8 @@ def player_guard(player):
 # combat loop
 def combat(player, enemy):
     print_slow(f"combat between {player.name} and {enemy.name} has started.\n")
-    time.sleep(1)
+    print("enter to continue")
+    input()
     while True:
         os.system("cls")
         multi_choice(["attack", "guard"],
@@ -92,7 +93,9 @@ def combat(player, enemy):
             player.armor_class = player.armor_class_base
             player.health_bar.draw()
             enemy.health_bar.draw()
+            print("enter to continue")
             input()
+
             if player.health == 0:
                 print_slow("you died\n")
                 break

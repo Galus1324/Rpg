@@ -14,6 +14,7 @@ channel1 = mixer.Channel(0)
 channel2 = mixer.Channel(1)
 
 channel1.set_volume(0.2)
+channel2.set_volume(0.5)
 
 def play_sound(sound, channel):
     channel.play(sound, loops=-1)
