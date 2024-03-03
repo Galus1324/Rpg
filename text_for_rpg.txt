@@ -56,7 +56,7 @@ Eirlys: It is only a couple of days on foot from where we are right now.
 Eirlys: I wish you the best of luck!
 Eirlys: Goodbye!
 === no_help_eirlys ===
-The child says fuck you as he kicks you in your leg before running away.
+The child says fuck you as he kicks you in the leg before running away.
 === stay_in_the_village ===
 You are still in the village.
 there are multiple things you can do here.
@@ -100,6 +100,7 @@ Redos Firewhip: Excellent choice!
 Redos Firewhip: The ring will protect you on all of your upcoming battles.
 === potion_of_healing ===
 Redos Firewhip: Excellent choice!
+Redos Firewhip: When you drink it, it will heal you to full health. 
 Redos Firewhip: Just remember once you use it it's gone so use it when you really need to.
 === what_am_i ===
 Redos Firewhip: I am a tiefling of many tales, weaving magic into everyday wares at the Devilish Deals Depot. 

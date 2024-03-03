@@ -36,13 +36,22 @@ def blacksmith():
                  [lambda: upgrade_armor(),
                   lambda: print_slow(blacksmith_talk_1)])
     print_slow(blacksmith_leave)
-    
+
+def choose_potion():
+    print_slow(potion_of_healing)
+    player.health_potion = True
+
+def choose_ring():
+    print_slow(ring_of_protection)
+    player.armor_class += 1
+    player.armor_class_base += 1
+
 def merchant():
     print_slow(go_to_merchant)
     circle_choice(["buy", "what are you","tell me a story","leave"],
                   [lambda: (print_slow(merchant_buy),multi_choice(["potion","ring"],
-                                                                   [lambda: print_slow(potion_of_healing),
-                                                                    lambda: print_slow(ring_of_protection)])),
+                                                                   [lambda: choose_potion(),
+                                                                    lambda: choose_ring()])),
                    lambda: print_slow(what_am_i),
                    lambda: print_slow(tiefling_story)])
     print_slow(merchant_leave)

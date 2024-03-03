@@ -1,5 +1,6 @@
-import random
+import random, os, time
 from functions import *
+from health_bar import HealthBar
 
 
 class Weapon:
@@ -27,23 +28,27 @@ class Character:
     def attack(self, target) -> None:
         if random.randint(1, 20) + self.weapon.attack_bonus >= target.armor_class:
             damage = self.weapon.calculate_damage()
-            print_slow(f"{self.name} hit {target.name} with {self.weapon.name}\n")
+            target.health_bar.update()
+            print(f"{self.name} hit {target.name} with {self.weapon.name}\n")
             target.health -= damage
             target.health = max(target.health, 0)
 
         else: 
-            print_slow(f"{self.name} missed {target.name} with {self.weapon.name}\n")
+            print(f"{self.name} missed {target.name} with {self.weapon.name}\n")
 
 player_name = ""
 
 class Player(Character):
     def __init__(self, name: str, health: int, weapon: Weapon, armor_class: int, money: int) -> None:
         super().__init__(name, health, weapon, armor_class)
+        self.health_bar = HealthBar(self, color="green")
         self.money = money
+        self.health_potion = False
 
 class Enemy(Character):
     def __init__(self, name: str, health: int, weapon: Weapon, armor_class: int) -> None:
         super().__init__(name, health, weapon, armor_class)
+        self.health_bar = HealthBar(self, color="red")
 
 player = Player
 
@@ -63,34 +68,36 @@ mage = Player(name=player_name,  health=60, weapon=spell_book, armor_class=13, m
 rogue = Player(name=player_name, health=70, weapon=dagger, armor_class=15, money=150)
 goblin = Enemy(name="Goblin_1", health=50, weapon=sword, armor_class=15)
 triceratops = Enemy(name="triceratops", health=200, weapon=horns, armor_class=14)
-
-def player_attack(player, enemy):
-    player.attack(enemy)
-    print_slow(f"health of {enemy.name}: {enemy.health}\n")
+   
 
 def player_guard(player):
     player.guard()
-    print_slow(f"armor class of {player.name} has increased to {player.armor_class}\n")
+    print(f"armor class of {player.name} has increased to {player.armor_class}\n")
 
     
 # combat loop
 def combat(player, enemy):
     print_slow(f"combat between {player.name} and {enemy.name} has started.\n")
+    time.sleep(2)
     while True:
-        multi_choice(["attack" or "a", "guard" or "g"],
-                     [lambda: player_attack(player, enemy),
+        os.system("cls")
+        multi_choice(["attack", "guard"],
+                     [lambda: player.attack(enemy),
                       lambda: player_guard(player)])
         if enemy.health == 0:
-            print("you won\n")
+            print_slow("you won\n")
             break
         else:
             enemy.attack(player)
-            print_slow(f"health of {player.name}: {player.health}\n")
             player.armor_class = player.armor_class_base
+            player.health_bar.draw()
+            enemy.health_bar.draw()
+            input()
             if player.health == 0:
                 print_slow("you died\n")
                 break
             else:
                 pass
+            
 
         

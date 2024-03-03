@@ -47,7 +47,7 @@ def print_slow(args):
 # Function for multiple choice interactions
 def multi_choice(answers, consequences):
     print_slow("Choose an option:\n")
-    """print_slow(f"Available answers: {', '.join(answers)}\n")"""
+    print_slow(f"Available answers: {', '.join(answers)}\n")
     x = input().lower()
 
     if x not in answers:
