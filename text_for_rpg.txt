@@ -51,6 +51,7 @@ Eirlys: I know that you are a strong hero.
 === help_eirlys ===
 Eirlys: Yes, I knew I could rely on you {player_name}.
 Eirlys: So, let me give you some tips before you venture on.
+Eirlys: My father is a high and skinny half elf, he is usually dressed in a white tunic with a red scarf. 
 Eirlys: Here is the map to the Tomb of annihilation.
 Eirlys: It is only a couple of days on foot from where we are right now.
 Eirlys: I wish you the best of luck!
@@ -154,7 +155,7 @@ you finish your tea which was very delicious and leave the little shack.
 Before you leave a local warns you about many dangers along the road.
 Specifically dinosaurs and bandits.
 You start your journey towards the Tomb after thanking everyone in the village.
-you are traveling south through vast forests all around you. 
+You are traveling south through vast forests all around you. 
 === getting_lost ===
 You decide to stray from the trail as it seems to be faster that way.
 Before you know you get lost with no idea where you came from.
@@ -162,8 +163,10 @@ When you are searching for a way out you stumble upon a triceratops eager to pro
 The beast charges towards you and with no other choice you prepare for battle.
  === escaping_forest ===
 After defeating the beast you slowly give up on getting out of the forest today so you set a camp.
-You eat some of your food and go to sleep.
+You eat some of your remaining rations before going to sleep.
 You wake up felling lively and replenished.
+That day you avoid any possible dangers and manage to get back on the right track.
+=== Eirlys_father ===
 
 
 

@@ -9,13 +9,6 @@ from music import *
 drink=True
 toa_map=True
 
-class GameOverException(Exception):
-    pass
-
-def game_over():
-    print("Game Over")
-    raise GameOverException("Igra je končana.")
-
 def select_fighter():
     global player
     player = fighter
@@ -80,6 +73,8 @@ def get_lost():
     print_slow(getting_lost)
     combat(player, triceratops)
     print_slow(escaping_forest)
+    player.rest()
+
 
 def journey_start():
     play_sound(jungle_music, channel2)
@@ -88,6 +83,8 @@ def journey_start():
         get_lost()
     else:
         pass
+    print_slow(Eirlys_father)
+
 
 
 filename = "text_for_rpg.txt"
@@ -99,61 +96,61 @@ extracted_sections = extract_sections(sections)
 # Dynamically create variables from extracted sections
 locals().update(extracted_sections)
 
-"""try:"""
-print_slow(class_selection)
+try:
+    print_slow(class_selection)
 
-multi_choice(["fighter", "mage", "rogue"],
-            [select_fighter,
-            select_mage,
-            select_rogue])
+    multi_choice(["fighter", "mage", "rogue"],
+                [select_fighter,
+                select_mage,
+                select_rogue])
 
-print_slow(name)
+    print_slow(name)
 
-player.name = input()
+    player.name = input()
 
-play_sound(village_music, channel2)
-print_slow(intro)
+    play_sound(village_music, channel2)
+    print_slow(intro)
 
-multi_choice(["beer", "mead", "nothing"],
-            [lambda: print_slow(beer),
-            lambda: print_slow(mead),
-            lambda: (print_slow(nothing),
-                    globals().update({"drink": False}))])
-game_over()
-print_slow(bartender_talk)
+    multi_choice(["beer", "mead", "nothing"],
+                [lambda: print_slow(beer),
+                lambda: print_slow(mead),
+                lambda: (print_slow(nothing),
+                        globals().update({"drink": False}))])
+    game_over()
+    print_slow(bartender_talk)
 
-multi_choice(["yes", "no"],
-            [lambda: print_slow(toa_yes),
-            lambda: print_slow(toa_no)])
-
-if drink:
-    print_slow(drink_yes)
-else:
-    print_slow(drink_no)
-    
-print_slow(outside_village.format(player_name=player_name))
-
-multi_choice(["yes", "no"],
-            [lambda: print_slow(help_eirlys.format(player_name=player_name)),
-            lambda: (print_slow(no_help_eirlys), globals().update({'toa_map': False})),])
-
-if toa_map:
-    print_slow("Do you wish to leave the village and go follow the map Towards the Tomb?\n")
     multi_choice(["yes", "no"],
-                [lambda: journey_start(),
-                lambda: None])
+                [lambda: print_slow(toa_yes),
+                lambda: print_slow(toa_no)])
 
-# If they stay in the village
-print_slow(stay_in_the_village)
-circle_choice(["blacksmith","merchant","wonder", "go towards the tomb"],
-            [lambda: blacksmith(), 
-            lambda: merchant(), 
-            lambda: wonder(),
-            lambda: journey_start()])
+    if drink:
+        print_slow(drink_yes)
+    else:
+        print_slow(drink_no)
+        
+    print_slow(outside_village.format(player_name=player_name))
+
+    multi_choice(["yes", "no"],
+                [lambda: print_slow(help_eirlys.format(player_name=player_name)),
+                lambda: (print_slow(no_help_eirlys), globals().update({'toa_map': False})),])
+
+    if toa_map:
+        print_slow("Do you wish to leave the village and go follow the map Towards the Tomb?\n")
+        multi_choice(["yes", "no"],
+                    [lambda: journey_start(),
+                    lambda: None])
+
+    # If they stay in the village
+    print_slow(stay_in_the_village)
+    circle_choice(["blacksmith","merchant","wonder", "go towards the tomb"],
+                [lambda: blacksmith(), 
+                lambda: merchant(), 
+                lambda: wonder(),
+                lambda: journey_start()])
 
 
-"""except GameOverException as e:
-    pass"""
+except GameOverException as e:
+    pass
 
 
 

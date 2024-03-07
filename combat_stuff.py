@@ -21,6 +21,9 @@ class Character:
         self.weapon = weapon
         self.armor_class = armor_class
         self.armor_class_base = armor_class
+    
+    def rest(self):
+        self.health = self.health_max
         
     def guard(self):
         self.armor_class += 2
@@ -98,7 +101,7 @@ def combat(player, enemy):
 
             if player.health == 0:
                 print_slow("you died\n")
-                break
+                game_over()
             else:
                 pass
             
