@@ -69,7 +69,8 @@ tail = Weapon(name="a tail", min_damage=1, max_damage=8, attack_bonus=7)
 fighter = Player(name=player_name, health=100, weapon=sword, armor_class=17, money=100)
 mage = Player(name=player_name,  health=60, weapon=spell_book, armor_class=13, money=200)
 rogue = Player(name=player_name, health=70, weapon=dagger, armor_class=15, money=150)
-goblin = Enemy(name="Goblin_1", health=50, weapon=sword, armor_class=15)
+goblin_1 = Enemy(name="Orki", health=50, weapon=sword, armor_class=15)
+goblin_2 = Enemy(name="Porky", health=50, weapon=sword, armor_class=15)
 triceratops = Enemy(name="triceratops", health=200, weapon=horns, armor_class=12)
    
 

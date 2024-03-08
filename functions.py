@@ -1,6 +1,13 @@
 import sys, time, pygame, os
 from music import *
 
+class GameOverException(Exception):
+    pass
+
+def game_over():
+    print("Game Over")
+    raise GameOverException("Igra je končana.")
+
 # Function to load sections from the text file
 def load_sections(filename):
     with open(filename, "r") as file:

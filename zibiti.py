@@ -75,6 +75,14 @@ def get_lost():
     print_slow(escaping_forest)
     player.rest()
 
+def fighting_goblins():
+    print_slow(goblin_battle)
+    combat(player, goblin_1)
+    combat(player, goblin_2)
+    if toa_map:
+        print_slow(goblin_win)
+
+
 
 def journey_start():
     play_sound(jungle_music, channel2)
@@ -83,7 +91,10 @@ def journey_start():
         get_lost()
     else:
         pass
-    print_slow(Eirlys_father)
+    print_slow(goblins)
+    multi_choice(["fight", "run away"],
+                 [lambda: fighting_goblins(),
+                  lambda: print_slow(goblin_run) ])
 
 
 
@@ -107,6 +118,8 @@ try:
     print_slow(name)
 
     player.name = input()
+
+    journey_start()
 
     play_sound(village_music, channel2)
     print_slow(intro)

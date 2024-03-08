@@ -155,9 +155,10 @@ you finish your tea which was very delicious and leave the little shack.
 Before you leave a local warns you about many dangers along the road.
 Specifically dinosaurs and bandits.
 You start your journey towards the Tomb after thanking everyone in the village.
-You are traveling south through vast forests all around you. 
+You are traveling south through vast forests all around you.
+The day of travel passes with nothing major happening. 
 === getting_lost ===
-You decide to stray from the trail as it seems to be faster that way.
+The next day decide to stray from the trail as it seems to be faster that way.
 Before you know you get lost with no idea where you came from.
 When you are searching for a way out you stumble upon a triceratops eager to prove to you his strength.
 The beast charges towards you and with no other choice you prepare for battle.
@@ -166,7 +167,23 @@ After defeating the beast you slowly give up on getting out of the forest today 
 You eat some of your remaining rations before going to sleep.
 You wake up felling lively and replenished.
 That day you avoid any possible dangers and manage to get back on the right track.
-=== Eirlys_father ===
+=== goblins ===
+In the afternoon you stumble upon a dead body of a half elf in a bloodied white tunic a red scarf.
+When you come closer to the body 2 greenish monsters emerge from a nearby bush. 
+When they fully come out you can see that they are goblins armed for battle.
+Goblin: My name is Orki and he is Porky and we are gonna kill you. 
+=== goblin_battle ===
+You take a wide stance and prepare for battle.
+The goblins waste no time and charge towards you.
+=== goblin_win ===
+after defeating the monsters you see that the body on the ground matches the description of Eirlys’s father.
+You burry him with all the honor he deserves before continoung on your way.
+=== goblin_run ===
+You start running away with a tail between your legs.
+The goblins start running after you but are unable to catch you. 
+
+
+
 
 
 
