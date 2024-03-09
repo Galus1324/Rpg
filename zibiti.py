@@ -89,7 +89,7 @@ def room_3():
     print("room_3")
 
 def book():
-    print("book")    
+    print_slow(read_book)   
 
 def lockpick_left():
     print_slow(lockpick_door)
@@ -155,8 +155,6 @@ try:
 
     player.name = input()
 
-    dungeon()
-
     play_sound(village_music, channel2)
     print_slow(intro)
 
@@ -165,7 +163,8 @@ try:
                 lambda: print_slow(mead),
                 lambda: (print_slow(nothing),
                         globals().update({"drink": False}))])
-    game_over()
+    
+    
     print_slow(bartender_talk)
 
     multi_choice(["yes", "no"],

@@ -200,6 +200,12 @@ With your dexterous hands you quicly open the door and step into the next room.
 === not_open_door ===
 You try with all the skills you got to open the door but the lock proves to be too much of a challenge to you.
 With no other choice you go to the book in the middle.
+=== read book ===
+The first page of the book reads write your name to continue.
+When you scroll the book, you see countless names written in it.
+And every single one is crossed with blood.
+you see no other choice so you write your name in the book.
+Immediately the doors open and you can continue.
 
 
 
