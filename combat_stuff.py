@@ -42,11 +42,18 @@ class Character:
 player_name = ""
 
 class Player(Character):
-    def __init__(self, name: str, health: int, weapon: Weapon, armor_class: int, money: int) -> None:
+    def __init__(self, name: str, health: int, weapon: Weapon, armor_class: int, money: int, lockpicking_bonus: int) -> None:
         super().__init__(name, health, weapon, armor_class)
         self.health_bar = HealthBar(self, color="green")
         self.money = money
+        self.lockpicking_bonus = lockpicking_bonus
         self.health_potion = False
+
+    def lockpicking(self):
+        if random.randint(1,20) + self.lockpicking_bonus > 12:
+            return True
+        else:
+            return False
 
 class Enemy(Character):
     def __init__(self, name: str, health: int, weapon: Weapon, armor_class: int) -> None:
@@ -66,9 +73,9 @@ tail = Weapon(name="a tail", min_damage=1, max_damage=8, attack_bonus=7)
 
 
 # Create characters
-fighter = Player(name=player_name, health=100, weapon=sword, armor_class=17, money=100)
-mage = Player(name=player_name,  health=60, weapon=spell_book, armor_class=13, money=200)
-rogue = Player(name=player_name, health=70, weapon=dagger, armor_class=15, money=150)
+fighter = Player(name=player_name, health=100, weapon=sword, armor_class=17, money=100, lockpicking_bonus=0)
+mage = Player(name=player_name,  health=60, weapon=spell_book, armor_class=13, money=200, lockpicking_bonus=3)
+rogue = Player(name=player_name, health=70, weapon=dagger, armor_class=15, money=150, lockpicking_bonus=7)
 goblin_1 = Enemy(name="Orki", health=50, weapon=sword, armor_class=15)
 goblin_2 = Enemy(name="Porky", health=50, weapon=sword, armor_class=15)
 triceratops = Enemy(name="triceratops", health=200, weapon=horns, armor_class=12)

@@ -155,7 +155,7 @@ you finish your tea which was very delicious and leave the little shack.
 Before you leave a local warns you about many dangers along the road.
 Specifically dinosaurs and bandits.
 You start your journey towards the Tomb after thanking everyone in the village.
-You are traveling south through vast forests all around you.
+You are traveling south through vast jungle all around you.
 The day of travel passes with nothing major happening. 
 === getting_lost ===
 The next day decide to stray from the trail as it seems to be faster that way.
@@ -176,11 +176,35 @@ Goblin: My name is Orki and he is Porky and we are gonna kill you.
 You take a wide stance and prepare for battle.
 The goblins waste no time and charge towards you.
 === goblin_win ===
-after defeating the monsters you see that the body on the ground matches the description of Eirlys’s father.
-You burry him with all the honor he deserves before continoung on your way.
+after defeating the monsters, you see that the body on the ground matches the description of Eirlys's father.
+You burry him with all the honor he deserves before continuing on your way.
 === goblin_run ===
 You start running away with a tail between your legs.
 The goblins start running after you but are unable to catch you. 
+=== peaceful_travel ===
+After that the day is spend traveling in peace and appreciating the nature around yourself.
+In the afternoon of the next day you arrive at the tomb.
+There is no one around.
+Not a voice is heard.
+You go to sleep before the massive dungeon doors.
+The next morning you wake up ready like never before.
+You step through the doors that magically close behind you.
+=== dungeon_room1 ===
+There are many ancient looking engravings but you are unable to understand any of it.
+The room has 2 stone doors one, on left and one on the right both of them are immovable, but have a keyhole.
+In the middle of the room is a book stand with an open book and a pen on it.
+=== lockpick_door === 
+you step up to the large stone door and try to open it.
+=== open_door ===
+With your dexterous hands you quicly open the door and step into the next room.
+=== not_open_door ===
+You try with all the skills you got to open the door but the lock proves to be too much of a challenge to you.
+With no other choice you go to the book in the middle.
+
+
+
+
+
 
 
 

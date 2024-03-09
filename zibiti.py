@@ -82,6 +82,39 @@ def fighting_goblins():
     if toa_map:
         print_slow(goblin_win)
 
+def room_2():
+    print("room_2")
+
+def room_3():
+    print("room_3")
+
+def book():
+    print("book")    
+
+def lockpick_left():
+    print_slow(lockpick_door)
+    if player.lockpicking():
+        print_slow(open_door)
+        room_2()
+    else:
+        print_slow(not_open_door)
+        book()
+
+def lockpick_right():
+    print_slow(lockpick_door)
+    if player.lockpicking():
+        print_slow(open_door)
+        room_3()
+    else:
+        print_slow(not_open_door)
+        book()
+    
+def dungeon():
+    print_slow(dungeon_room1)
+    multi_choice(["lockpick left door","lockpick right door", "go to the book"],
+                 [lambda: lockpick_left(),
+                  lambda: lockpick_right(),
+                  lambda: book()])
 
 
 def journey_start():
@@ -95,6 +128,9 @@ def journey_start():
     multi_choice(["fight", "run away"],
                  [lambda: fighting_goblins(),
                   lambda: print_slow(goblin_run) ])
+    print_slow(peaceful_travel)
+    player.rest()
+    dungeon()
 
 
 
@@ -119,7 +155,7 @@ try:
 
     player.name = input()
 
-    journey_start()
+    dungeon()
 
     play_sound(village_music, channel2)
     print_slow(intro)
