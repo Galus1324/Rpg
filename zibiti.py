@@ -12,17 +12,17 @@ toa_map=True
 def select_fighter():
     global player
     player = fighter
-    print_slow("You selected Fighter.\n")
+    print_slow("You selected fighter.\n")
 
 def select_mage():
     global player
     player = mage
-    print_slow("You selected Mage.\n")
+    print_slow("You selected mage.\n")
 
 def select_rogue():
     global player
     player = rogue
-    print_slow("You selected Rogue.\n")
+    print_slow("You selected rogue.\n")
 
 def upgrade_armor():
     print_slow(upgrade_1)
@@ -38,7 +38,7 @@ def blacksmith():
 
 def choose_potion():
     print_slow(potion_of_healing)
-    player.health_potion = True
+    player.health_potion += 1
 
 def choose_ring():
     print_slow(ring_of_protection)
@@ -83,13 +83,21 @@ def fighting_goblins():
         print_slow(goblin_win)
 
 def room_2():
-    print("room_2")
+    print_slow(skeleton_room)
+    for i in range(1):
+        combat(player, skeleton)
+    print_slow(post_skeleton)
+    multi_choice(["yes", "no"],
+                 [lambda: player.potion()])
 
 def room_3():
     print("room_3")
 
 def book():
-    print_slow(read_book)   
+    print_slow(read_book)
+    multi_choice(["go left", "go right"],
+                 [lambda: room_2(),
+                  lambda: room_3()])   
 
 def lockpick_left():
     print_slow(lockpick_door)
@@ -155,6 +163,10 @@ try:
 
     player.name = input()
 
+    player.health_potion += 1
+
+    room_2()
+
     play_sound(village_music, channel2)
     print_slow(intro)
 
@@ -163,7 +175,6 @@ try:
                 lambda: print_slow(mead),
                 lambda: (print_slow(nothing),
                         globals().update({"drink": False}))])
-    
     
     print_slow(bartender_talk)
 

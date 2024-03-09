@@ -48,7 +48,7 @@ def print_slow(args):
         for char in arg:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.07)
+            time.sleep(0.05)
     channel1.stop()
 
 # Function for multiple choice interactions

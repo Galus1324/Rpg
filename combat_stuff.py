@@ -27,6 +27,7 @@ class Character:
         
     def guard(self):
         self.armor_class += 2
+        print(f"armor class of {self.name} has increased to {self.armor_class}\n")
     
     def attack(self, target) -> None:
         if random.randint(1, 20) + self.weapon.attack_bonus >= target.armor_class:
@@ -47,8 +48,13 @@ class Player(Character):
         self.health_bar = HealthBar(self, color="green")
         self.money = money
         self.lockpicking_bonus = lockpicking_bonus
-        self.health_potion = False
+        self.health_potion = 0
 
+    def potion(self):
+        print(f"{self.name} drank the healing potion and regained all hp")
+        self.health_potion -=1
+        self.rest()
+        
     def lockpicking(self):
         if random.randint(1,20) + self.lockpicking_bonus > 12:
             return True
@@ -70,7 +76,7 @@ spell_book = Weapon(name="a spell book", min_damage=1, max_damage=60, attack_bon
 dagger = Weapon(name="a dagger", min_damage=20, max_damage=35, attack_bonus=8)
 horns = Weapon(name="horns", min_damage=5, max_damage=8, attack_bonus=5)
 tail = Weapon(name="a tail", min_damage=1, max_damage=8, attack_bonus=7)
-
+rusted_sword = Weapon(name="a rusted sword", min_damage=5, max_damage=15, attack_bonus=3)
 
 # Create characters
 fighter = Player(name=player_name, health=100, weapon=sword, armor_class=17, money=100, lockpicking_bonus=0)
@@ -79,11 +85,8 @@ rogue = Player(name=player_name, health=70, weapon=dagger, armor_class=15, money
 goblin_1 = Enemy(name="Orki", health=50, weapon=sword, armor_class=15)
 goblin_2 = Enemy(name="Porky", health=50, weapon=sword, armor_class=15)
 triceratops = Enemy(name="triceratops", health=200, weapon=horns, armor_class=12)
+skeleton = Enemy(name="skeleton", health=50, weapon=rusted_sword, armor_class=12)
    
-
-def player_guard(player):
-    player.guard()
-    print(f"armor class of {player.name} has increased to {player.armor_class}\n")
 
     
 # combat loop
@@ -91,12 +94,21 @@ def combat(player, enemy):
     print_slow(f"combat between {player.name} and {enemy.name} has started.\n")
     print("enter to continue")
     input()
+
     while True:
         os.system("cls")
-        multi_choice(["attack", "guard"],
-                     [lambda: player.attack(enemy),
-                      lambda: player_guard(player)])
+        if player.health_potion > 0:
+            multi_choice(["attack", "guard", "drink potion"],
+                         [lambda: player.attack(enemy),
+                          lambda: player.guard(),
+                          lambda: player.potion()])
+        else:
+            multi_choice(["attack", "guard"],
+                         [lambda: player.attack(enemy),
+                          lambda: player.guard()])
+
         if enemy.health == 0:
+            enemy.rest()
             print_slow("you won\n")
             break
         else:

@@ -62,7 +62,7 @@ The child says fuck you as he kicks you in the leg before running away.
 You are still in the village.
 there are multiple things you can do here.
 You can visit the blacksmith, the general merchant go back to the tavern
-or just wonder around and searching for more information regarding the Tomb of annihilation.
+or just wonder around and search for more information regarding the Tomb of annihilation.
 === go_to_blacksmith ===
 you come to the Sally's magical forge. The workshop ran by a cheerful half-orc named Sally. 
 The exterior features a whimsy anvil sign, hinting at the warmth within. When you come Inside,
@@ -191,7 +191,8 @@ The next morning you wake up ready like never before.
 You step through the doors that magically close behind you.
 === dungeon_room1 ===
 There are many ancient looking engravings but you are unable to understand any of it.
-The room has 2 stone doors one, on left and one on the right both of them are immovable, but have a keyhole.
+The room has 2 stone doors one, on left with an image of a skeleton carved into it
+ and and one on the right that has a devilish silhuete both of them are immovable, but have a keyhole.
 In the middle of the room is a book stand with an open book and a pen on it.
 === lockpick_door === 
 you step up to the large stone door and try to open it.
@@ -206,6 +207,18 @@ When you scroll the book, you see countless names written in it.
 And every single one is crossed with blood.
 you see no other choice so you write your name in the book.
 Immediately the doors open and you can continue.
+=== skeleton_room ===
+when you come inside the room you see a dimly lit room with just a couple of torches.
+The room is mostly just an empty space with an exception of a large wooden box in the middle.
+When you move ahead the box suddenly opens and out of it come 4 skeletons that immediately attack you.
+The door behind you closes at the same time.
+=== post_skeleton ===
+After defeating all the sceletons you spot something glowing in a redish colour in the back of the wooden box.
+You come coloser and and see that its 2 potions of healing.
+You collect them.
+do you wish to drink one of them now?
+
+ you go to the exit of the room and go into the next room. 
 
 
 
