@@ -81,6 +81,9 @@ def fighting_goblins():
     combat(player, goblin_2)
     if toa_map:
         print_slow(goblin_win)
+    
+def room_4():
+    print_slow("room 4")
 
 def room_2():
     print_slow(skeleton_room)
@@ -91,10 +94,20 @@ def room_2():
                  [lambda: player.potion(),
                   lambda: None])
     print_slow(room_2_exit)
+    room_4()
     
 def room_3():
-    print(devil_room)
+    print_slow(devil_room)
     combat(player, devil)
+    print_slow(post_devil)
+    player.weapon.min_damage += 5
+    player.weapon.max_damage += 5
+    multi_choice(["yes", "no"],
+                 [lambda: player.potion(),
+                  lambda: None])
+    print_slow(room_3_exit)
+    room_4()
+
 
 def book():
     print_slow(read_book)
@@ -165,6 +178,9 @@ try:
     print_slow(name)
 
     player.name = input()
+
+    player.health_potion = 1
+    room_3()
 
     play_sound(village_music, channel2)
     

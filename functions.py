@@ -36,7 +36,7 @@ def extract_sections(sections):
     
     for heading, content in sections.items():
        
-        variable_name = heading.replace(" ", "_").lower()
+        variable_name = heading
         extracted_variables[variable_name] = content
     
     return extracted_variables

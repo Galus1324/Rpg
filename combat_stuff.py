@@ -54,6 +54,7 @@ class Player(Character):
         print(f"{self.name} drank the healing potion and regained all hp")
         self.health_potion -=1
         self.rest()
+        self.health_bar.update()
         
     def lockpicking(self):
         if random.randint(1,20) + self.lockpicking_bonus > 12:
@@ -87,7 +88,7 @@ goblin_1 = Enemy(name="Orki", health=50, weapon=sword, armor_class=15)
 goblin_2 = Enemy(name="Porky", health=50, weapon=sword, armor_class=15)
 triceratops = Enemy(name="triceratops", health=200, weapon=horns, armor_class=12)
 skeleton = Enemy(name="skeleton", health=50, weapon=rusted_sword, armor_class=12)
-devil = Enemy(name="Ashbeel", health=200, weapon=spear, Armor_class=15)
+devil = Enemy(name="Ashbeel", health=200, weapon=spear, armor_class=15)
    
 
     
