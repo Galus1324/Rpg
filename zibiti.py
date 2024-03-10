@@ -84,14 +84,17 @@ def fighting_goblins():
 
 def room_2():
     print_slow(skeleton_room)
-    for i in range(1):
+    for i in range(4):
         combat(player, skeleton)
     print_slow(post_skeleton)
     multi_choice(["yes", "no"],
-                 [lambda: player.potion()])
-
+                 [lambda: player.potion(),
+                  lambda: None])
+    print_slow(room_2_exit)
+    
 def room_3():
-    print("room_3")
+    print(devil_room)
+    combat(player, devil)
 
 def book():
     print_slow(read_book)
@@ -163,11 +166,8 @@ try:
 
     player.name = input()
 
-    player.health_potion += 1
-
-    room_2()
-
     play_sound(village_music, channel2)
+    
     print_slow(intro)
 
     multi_choice(["beer", "mead", "nothing"],

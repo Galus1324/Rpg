@@ -77,6 +77,7 @@ dagger = Weapon(name="a dagger", min_damage=20, max_damage=35, attack_bonus=8)
 horns = Weapon(name="horns", min_damage=5, max_damage=8, attack_bonus=5)
 tail = Weapon(name="a tail", min_damage=1, max_damage=8, attack_bonus=7)
 rusted_sword = Weapon(name="a rusted sword", min_damage=5, max_damage=15, attack_bonus=3)
+spear = Weapon(name="a spear", min_damage=10, max_damage=20, attack_bonus=5)
 
 # Create characters
 fighter = Player(name=player_name, health=100, weapon=sword, armor_class=17, money=100, lockpicking_bonus=0)
@@ -86,6 +87,7 @@ goblin_1 = Enemy(name="Orki", health=50, weapon=sword, armor_class=15)
 goblin_2 = Enemy(name="Porky", health=50, weapon=sword, armor_class=15)
 triceratops = Enemy(name="triceratops", health=200, weapon=horns, armor_class=12)
 skeleton = Enemy(name="skeleton", health=50, weapon=rusted_sword, armor_class=12)
+devil = Enemy(name="Ashbeel", health=200, weapon=spear, Armor_class=15)
    
 
     

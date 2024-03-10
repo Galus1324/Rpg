@@ -217,8 +217,20 @@ After defeating all the sceletons you spot something glowing in a redish colour 
 You come coloser and and see that its 2 potions of healing.
 You collect them.
 do you wish to drink one of them now?
+=== room_2_exit ===
+you step through all the bones and go to the exit of the room into the next one. 
+=== devil_room ===
+when you come inside you find yourself in a well lit completly red room.
+In  the room is a human sized fiend.
+He has purple skin with almost orkish fangs and pointed ears.
+In his hand is a large spear.
+He introduces himself in common:
+Ashbeel: I am Ashbeel and i was ordered to protect this room by the shitty lich,
+Ashbeel: who brought me here and kill anyone who comes inside.
+Ashbeel: Any last words?
 
- you go to the exit of the room and go into the next room. 
+
+
 
 
 
