@@ -9,6 +9,7 @@ village_music = mixer.Sound("music/village_music.mp3")
 jungle_music = mixer.Sound("music/jungle_music.mp3")
 final_boss_music = mixer.Sound("music/final_boss.mp3")
 epic_fight_music = mixer.Sound("music/epic_fight_music.mp3")
+dungeon_music = mixer.Sound("music/dungeon_music.mp3")
 
 channel1 = mixer.Channel(0)
 channel2 = mixer.Channel(1)
