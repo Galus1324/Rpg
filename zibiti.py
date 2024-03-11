@@ -134,6 +134,7 @@ def lockpick_right():
         book()
     
 def dungeon():
+    play_sound(dungeon_music, channel2)
     print_slow(dungeon_room1)
     multi_choice(["lockpick left door","lockpick right door", "go to the book"],
                  [lambda: lockpick_left(),
@@ -178,9 +179,6 @@ try:
     print_slow(name)
 
     player.name = input()
-
-    player.health_potion = 1
-    room_3()
 
     play_sound(village_music, channel2)
     
