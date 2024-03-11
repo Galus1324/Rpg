@@ -51,7 +51,7 @@ Eirlys: I know that you are a strong hero.
 === help_eirlys ===
 Eirlys: Yes, I knew I could rely on you {player_name}.
 Eirlys: So, let me give you some tips before you venture on.
-Eirlys: My father is a high and skinny half elf, he is usually dressed in a white tunic with a red scarf. 
+Eirlys: My father is a tall and skinny half elf, he is usually dressed in a white tunic with a red scarf. 
 Eirlys: Here is the map to the Tomb of annihilation.
 Eirlys: It is only a couple of days on foot from where we are right now.
 Eirlys: I wish you the best of luck!
@@ -65,7 +65,7 @@ You can visit the blacksmith, the general merchant go back to the tavern
 or just wonder around and search for more information regarding the Tomb of annihilation.
 === go_to_blacksmith ===
 you come to the Sally's magical forge. The workshop ran by a cheerful half-orc named Sally. 
-The exterior features a whimsy anvil sign, hinting at the warmth within. When you come Inside,
+The exterior features a whimsy anvil sign, hinting at the warmth within. When you come inside,
 the rhythmic sounds of hammer on metal mixed with Sally's hearty laughter immediately get you into a better mood.
 The space is well organized, with every tool neatly placed on its designated spot
 and a well-worn anvil that takes center stage.  
@@ -90,7 +90,7 @@ The tiefling merchant, with curled horns and a sly grin
 weaves tales and engages patrons in lively banter, turning every purchase into a theatrical exchange.
 When he sees you he says:
 Redos Firewhip: What has brought you into my humble little store?
-=== Merchant_buy ===
+=== merchant_buy ===
 Redos Firewhip: Hmmm?
 Redos Firewhip: I suppose you wouldn't be interesting in any of my other crap.
 Redos Firewhip: So here.

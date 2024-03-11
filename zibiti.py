@@ -180,6 +180,8 @@ try:
 
     player.name = input()
 
+    merchant()
+
     play_sound(village_music, channel2)
     
     print_slow(intro)
