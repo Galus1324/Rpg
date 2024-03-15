@@ -90,8 +90,8 @@ def acererak_room():
     play_sound(final_boss_music, channel2)
     print_slow(meet_acererak)
     combat(player, acererak)
-    print_slow(post_boss_battle)
-    print_slow(the_end.format(player_name=player_name), 0.1)
+    print_slow(post_boss_battle.format(player_name=player_name))
+    print_slow(the_end, 0.1)
     game_over()
     
 def room_4():
@@ -106,6 +106,7 @@ def room_2():
     for i in range(4):
         combat(player, skeleton)
     print_slow(post_skeleton)
+    player.health_potion += 2
     multi_choice(["yes", "no"],
                  [lambda: player.potion(),
                   lambda: None])
@@ -118,6 +119,7 @@ def room_3():
     print_slow(post_devil)
     player.weapon.min_damage += 5
     player.weapon.max_damage += 5
+    player.health_potion += 1
     multi_choice(["yes", "no"],
                  [lambda: player.potion(),
                   lambda: None])
