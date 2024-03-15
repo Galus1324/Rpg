@@ -19,9 +19,9 @@ Credits:
 
   coding tutorials I used:
 
-    for classes and combat system: https://youtu.be/cM_ocyOrs_k?si=Y4kuY2fw9bib6Lku
+   for classes and combat system: https://youtu.be/cM_ocyOrs_k?si=Y4kuY2fw9bib6Lku
 
-    for print_slow: https://youtu.be/2h8e0tXHfk0?si=Kv_z1ODPBmC-AnTy
+   for print_slow: https://youtu.be/2h8e0tXHfk0?si=Kv_z1ODPBmC-AnTy
 
   for some help with debugging: https://chat.openai.com/
 
