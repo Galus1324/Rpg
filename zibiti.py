@@ -193,10 +193,6 @@ try:
 
     player.name = input()
 
-    player.weapon.max_damage = 10000
-
-    acererak_room()
-
     play_sound(village_music, channel2)
     
     print_slow(intro)
