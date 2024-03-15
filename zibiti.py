@@ -81,9 +81,25 @@ def fighting_goblins():
     combat(player, goblin_2)
     if toa_map:
         print_slow(goblin_win)
+
+def acererak_rage():
+    print_slow(violent_death)
+    game_over()
+
+def acererak_room():
+    play_sound(final_boss_music, channel2)
+    print_slow(meet_acererak)
+    combat(player, acererak)
+    print_slow(post_boss_battle)
+    print_slow(the_end.format(player_name=player_name), 0.1)
+    game_over()
     
 def room_4():
-    print_slow("room 4")
+    print_slow(boss_room)
+    multi_choice(["turn around", "advance"],
+                 [lambda: acererak_rage(),
+                  lambda: acererak_room()]) 
+
 
 def room_2():
     print_slow(skeleton_room)
@@ -158,16 +174,13 @@ def journey_start():
     dungeon()
 
 
-
+# for txt file
 filename = "text_for_rpg.txt"
 sections = load_sections("text_for_rpg.txt")
-
-# Extract all sections automatically
 extracted_sections = extract_sections(sections)
-
-# Dynamically create variables from extracted sections
 locals().update(extracted_sections)
 
+ #start
 try:
     print_slow(class_selection)
 
@@ -180,7 +193,9 @@ try:
 
     player.name = input()
 
-    merchant()
+    player.weapon.max_damage = 10000
+
+    acererak_room()
 
     play_sound(village_music, channel2)
     

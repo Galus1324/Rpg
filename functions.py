@@ -30,7 +30,7 @@ def load_sections(filename):
 
     return sections
 
-# Function to extract sections and create variables dynamically
+# Function to extract sections and create variables
 def extract_sections(sections):
     extracted_variables = {}
     
@@ -42,13 +42,13 @@ def extract_sections(sections):
     return extracted_variables
 
 # Function for printing text slowly
-def print_slow(args):
+def print_slow(args, sleep_time=0.06):
     play_sound(typing_sound, channel1)
     for arg in args:
         for char in arg:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.05)
+            time.sleep(sleep_time)
     channel1.stop()
 
 # Function for multiple choice interactions
@@ -64,7 +64,7 @@ def multi_choice(answers, consequences):
         index = answers.index(x)
         consequences[index]()
 
-# for looping choices
+# Function for multiple choice interactions where they arent exclusive
 def circle_choice(answers, consequences):
     while answers:
         print_slow("Choose an option:\n")

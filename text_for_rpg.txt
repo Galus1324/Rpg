@@ -201,7 +201,7 @@ With your dexterous hands you quicly open the door and step into the next room.
 === not_open_door ===
 You try with all the skills you got to open the door but the lock proves to be too much of a challenge to you.
 With no other choice you go to the book in the middle.
-=== read book ===
+=== read_book ===
 The first page of the book reads write your name to continue.
 When you scroll the book, you see countless names written in it.
 And every single one is crossed with blood.
@@ -213,7 +213,7 @@ The room is mostly just an empty space with an exception of a large wooden box i
 When you move ahead the box suddenly opens and out of it come 4 skeletons that immediately attack you.
 The door behind you closes at the same time.
 === post_skeleton ===
-After defeating all the sceletons you spot something glowing in a redish colour in the back of the wooden box.
+After defeating all the skeletons you spot something glowing in a redish colour in the back of the wooden box.
 You come coloser and and see that its 2 potions of healing.
 You collect them.
 do you wish to drink one of them now?
@@ -236,6 +236,36 @@ you put it on and can feel that you suddenly feel stronger.
 do you wish to drink one the potion now?
 === room_3_exit ===
 The door that leads out of the room opens and you step trought it.
+=== boss_room ===
+The door leads you down a long hallway to another door.
+On the Large stone door are written the words:
+"TURN AROUND GO BACK AND RETURN TO YOUR NORMAL LIFE OR FACE HIM AND PERISH!"
+=== violent_death ===
+The second you take a step back you freeze unable to move.
+You hear a loud voice scream:
+The voice: I always despised people like you. 
+The voice: You are no hero and you will die alone.
+After that you feel your entire body twisting and your internal organs squishing like jelly.
+In seconds you are lying on the ground bleeding out in agonizing pain praying for death to take you already.
+=== meet_acererak ===
+You use all of your strength to push open the heavy door.
+Inside you see a giant chamber covered from floor to ceiling with blood and human remains and only one large sarcophagus in the middle.
+You feel a dark and powerful magic coming from the sarcophagus. 
+Despite the horror you feel the magic calls to you and you answer.
+You come closer and closer to the sarcophagus and when you are just a couple meters away it opens.
+and out slowly comes an ancient and powerful looking lich.
+Then he speaks with a voice whose power is unmatched and permanently imbedded in your brain:
+Acererak: Welcome young adventurer come and face me with all your might.
+Acererak: I will enjoy ripping your scull apart.
+=== post_boss_battle ===
+After you defeat him you can see his body laying on the ground and suddenly his eyes open and he stands up.
+Acererak: Well that was a nice battle, good that i only used 1% of my full power.
+Acererak: And thank you {player_name} for playing a pawn in my game.
+Acererak: Now its time for our little game to end.
+=== the_end ===
+Acererak: POWER WORD KILL
+
+
 
 
 

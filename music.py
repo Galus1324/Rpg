@@ -1,6 +1,5 @@
 from pygame import mixer
 
-# for  sound
 mixer.init()
 mixer.set_num_channels(2)
 

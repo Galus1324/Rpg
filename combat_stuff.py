@@ -24,6 +24,7 @@ class Character:
     
     def rest(self):
         self.health = self.health_max
+        self.health_bar.update()
         
     def guard(self):
         self.armor_class += 2
@@ -51,10 +52,10 @@ class Player(Character):
         self.health_potion = 0
 
     def potion(self):
-        print(f"{self.name} drank the healing potion and regained all hp")
+        print_slow(f"{self.name} drank the healing potion and regained all hp")
         self.health_potion -=1
         self.rest()
-        self.health_bar.update()
+        
         
     def lockpicking(self):
         if random.randint(1,20) + self.lockpicking_bonus > 12:
@@ -79,6 +80,7 @@ horns = Weapon(name="horns", min_damage=5, max_damage=8, attack_bonus=5)
 tail = Weapon(name="a tail", min_damage=1, max_damage=8, attack_bonus=7)
 rusted_sword = Weapon(name="a rusted sword", min_damage=5, max_damage=15, attack_bonus=3)
 spear = Weapon(name="a spear", min_damage=10, max_damage=20, attack_bonus=5)
+staff = Weapon(name=" The Staff of the Forgotten One", min_damage=10, max_damage=40, attack_bonus=4)
 
 # Create characters
 fighter = Player(name=player_name, health=100, weapon=sword, armor_class=17, money=100, lockpicking_bonus=0)
@@ -89,6 +91,7 @@ goblin_2 = Enemy(name="Porky", health=50, weapon=sword, armor_class=15)
 triceratops = Enemy(name="triceratops", health=200, weapon=horns, armor_class=12)
 skeleton = Enemy(name="skeleton", health=50, weapon=rusted_sword, armor_class=12)
 devil = Enemy(name="Ashbeel", health=200, weapon=spear, armor_class=15)
+acererak = Enemy(name="Acererak", health=250, weapon=staff, armor_class=13)
    
 
     
@@ -123,7 +126,7 @@ def combat(player, enemy):
             input()
 
             if player.health == 0:
-                print_slow("you died\n")
+                print_slow("you lost\n")
                 game_over()
             else:
                 pass
