@@ -52,7 +52,7 @@ class Player(Character):
         self.health_potion = 0
 
     def potion(self):
-        print_slow(f"{self.name} drank the healing potion and regained all hp")
+        print_slow(f"{self.name} drank the healing potion and regained all hp\n")
         self.health_potion -=1
         self.rest()
         
