@@ -226,7 +226,7 @@ He has purple skin with almost orkish fangs and pointed ears.
 In his hand is a large spear.
 He introduces himself in common:
 Ashbeel: I am Ashbeel and i was ordered to protect this room by the shitty lich,
-Ashbeel: who brought me here and kill anyone who comes inside.
+Ashbeel: who brought me here to kill anyone who comes inside.
 Ashbeel: Any last words?
 === post_devil ===
 Ashbeel: Ahhh you have defeated me here take my ring and carry on my legacy.
@@ -264,7 +264,8 @@ Acererak: And thank you {player_name} for playing a pawn in my game.
 Acererak: Now its time for our little game to end.
 === the_end ===
 Acererak: POWER WORD KILL
-
+=== this_is_it ===
+tralalala
 
 
 
